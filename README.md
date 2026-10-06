@@ -29,7 +29,7 @@ I'm Mohammed. I build automations, web applications, and tools powered by local 
       <p>Automation and web solutions for everyday business workflows.</p>
       <sub>Automation · Web development</sub>
     </td>
-    <td width="50%" valign="top">https://github.com/MFazazi/Lino
+    <td width="50%" valign="top">
       <h3><a href="https://github.com/MFazazi/Lino">Lino ↗</a></h3>
       <p>A local desktop assistant for Windows, with voice interaction and tools to perform actions.</p>
       <sub>Local AI · Ollama · Desktop assistant</sub>
