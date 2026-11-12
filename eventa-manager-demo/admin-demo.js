@@ -191,7 +191,8 @@
     const u=id?findUser(id):null;
     if(id&&!u)return;
     const isProtected=u?.role==="Super administrateur";
-    const choices='<option value="a" '+(u?.org==="a"?"selected":"")+'>Plateforme Eventa</option>'+activeOrganizations().map(o=>'<option value="'+safe(o.id)+'" '+((u?.org||defaultOrg)===o.id?"selected":"")+'>'+safe(o.name)+'</option>').join('');
+    const chosenOrg=u?.org||defaultOrg||"x";
+    const choices='<option value="a" '+(chosenOrg==="a"?"selected":"")+' '+(!isProtected?"disabled":"")+' >Plateforme Eventa</option>'+store.organizations.map(o=>'<option value="'+safe(o.id)+'" '+(chosenOrg===o.id?"selected":"")+' '+(o.status==="Suspendu"&&!u?"disabled":"")+'>'+safe(o.name)+'</option>').join('');
     showModal(u?"Modifier l’utilisateur":"Nouvel utilisateur",'<p class="small muted">Les utilisateurs de cet aperçu sont fictifs ; aucun e-mail n’est envoyé.</p><form onsubmit="EventaAdmin.saveUser(event,'+(id?"'"+safe(id)+"'":"null")+')">'+
     '<label class="field">Nom complet<input required id="ad-user-name" maxlength="80" value="'+safe(u?.name||"")+'" placeholder="Ex. Samira Test"></label>'+
     '<label class="field">Adresse e-mail fictive<input required type="email" id="ad-user-email" maxlength="110" value="'+safe(u?.email||"")+'" placeholder="prenom@example.com"></label>'+
@@ -199,7 +200,7 @@
     '<label class="field">Rôle<select id="ad-user-role" '+(isProtected?"disabled":"")+'></select></label>'+
     (u?'<label class="field">Statut<select id="ad-user-status" '+(isProtected?"disabled":"")+'><option '+(u.status==="Actif"?"selected":"")+'>Actif</option><option '+(u.status==="Suspendu"?"selected":"")+'>Suspendu</option></select></label>':'')+
     '<div class="admin-form-actions"><button class="btn ghost" type="button" onclick="closemodal()">Annuler</button><button class="btn" type="submit">Enregistrer</button></div></form>');
-    updateRoleSelect(u?.org||defaultOrg||"a",u?.role||null);
+    updateRoleSelect(chosenOrg,u?.role||null);
   }
   function updateRoleSelect(org,selectedRole){
     const target=$("ad-user-role");if(!target)return;
