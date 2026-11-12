@@ -178,7 +178,7 @@
   function toggleOrg(id){
     const o=findOrg(id);if(!o)return;
     const newStatus=o.status==="Actif"?"Suspendu":"Actif";
-    if(newStatus==="Suspendu"&&!confirm("Suspendre "+o.name+" dans cette démonstration ? Son espace sera masqué du sélecteur."))return;
+    // Demonstration-only status switch: immediate and reversible, no browser confirmation trap.
     o.status=newStatus;activity(o.name+" : "+newStatus.toLowerCase(),"org");
     render();toast("Statut mis à jour.");
   }
