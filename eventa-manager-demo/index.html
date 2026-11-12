@@ -1,0 +1,222 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#481b34"><title>Eventa Manager — Aperçu</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet"><style>
+:root{--p:#491b37;--l:#f9f5f2;--gold:#bf8b4f;--m:#937f89;--b:#eee2e3}*{box-sizing:border-box}body{margin:0;background:#f8f5f4;font:13px "DM Sans",sans-serif;color:#482a3a}button,input,select{font:inherit}button{cursor:pointer}h1,h2,h3,p{margin:0}h1,h2{font-family:"Playfair Display",serif}h1{font-size:30px}h2{font-size:20px}.muted{color:var(--m)}.small{font-size:11px}.hidden{display:none!important}.btn{border:0;background:var(--p);color:#fff;border-radius:10px;padding:12px 16px;font-weight:800}.btn:active{transform:translateY(1px)}.btn.ghost{background:white;color:var(--p);border:1px solid #debdcf}.btn.sm{font-size:11px;padding:9px 12px}.tag{font-size:10px;border-radius:99px;padding:5px 9px;font-weight:800;background:#faeddf;color:#ab722c;white-space:nowrap}.tag.green{background:#e8f6ed;color:#257d53}.tag.blue{background:#e9efff;color:#4670a7}.tag.pink{background:#f4e8f4;color:#925c91}.card{background:#fff;border:1px solid var(--b);box-shadow:0 4px 18px #42152c08;border-radius:15px;min-width:0}.pad{padding:18px}.heading{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:16px}.heading h3{font-size:15px}.link{background:none;border:0;text-decoration:underline;color:#9e6384;font-weight:700;font-size:11px}.logo{font:700 23px "Playfair Display",serif;color:var(--p);display:flex;align-items:center;gap:8px}.logo em{font-style:normal;color:var(--gold)}.symbol{height:37px;width:37px;display:grid;place-items:center;border:2px solid var(--gold);border-radius:11px;font-size:20px}.top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:18px}.top h1{margin-top:6px;margin-bottom:4px}.eyebrow{font-size:10px;color:#a67d4d;font-weight:800;letter-spacing:1.4px}.notice{background:#fff4e5;border:1px solid #eedcc3;color:#936b39;border-radius:10px;padding:11px 13px;margin-bottom:16px;font-size:11px;line-height:1.6}
+#login{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;background:linear-gradient(150deg,#fffdfc,#f7ebe8)}.photo{background:linear-gradient(0deg,#321421b3,#32142115),url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1300&q=85') center/cover;display:flex;align-items:flex-end;padding:8%;color:#fff}.photo h1{font-size:clamp(34px,4vw,58px);line-height:1.14;max-width:550px}.photo p{font-size:15px;line-height:1.7;color:#ffedf4;margin-top:20px}.login-wrap{padding:40px;display:grid;place-items:center}.login-body{width:100%;max-width:430px}.login-body .logo{justify-content:center;margin-bottom:29px}.login-card{border-radius:20px;padding:36px;background:white;border:1px solid #efdedc;box-shadow:0 25px 70px #6a3d4c12}.login-card h2{text-align:center;font-size:36px}.login-card>p{text-align:center;color:var(--m);margin:10px 0 25px}.field{display:block;margin:16px 0 0;font-weight:800}.field input,.field select{display:block;width:100%;margin-top:8px;padding:13px;border:1px solid #e5d8d9;border-radius:9px;background:white;outline:none}.field input:focus,.field select:focus{border-color:var(--gold)}.login-card .btn{width:100%;margin-top:18px}
+#app{display:flex;min-height:100vh}.side{width:225px;flex:none;position:sticky;top:0;height:100vh;background:#fffcfb;border-right:1px solid #eee4e5;padding:22px 13px;display:flex;flex-direction:column}.side .logo{font-size:19px;margin:0 8px 30px}.side .symbol{height:31px;width:31px;font-size:16px}.group{font-size:10px;letter-spacing:1.2px;color:#b09ba3;font-weight:800;margin:18px 12px 9px}.nav{width:100%;border:0;border-radius:9px;background:none;color:#846a79;text-align:left;padding:11px 12px;font-weight:700;margin:1px 0;display:flex;gap:13px;align-items:center}.nav i{font-style:normal;font-size:17px;width:18px;text-align:center}.nav.active{background:var(--p);color:#fff}.nav:not(.active):hover{background:#f7eaf1}.side-foot{margin-top:auto;border-top:1px solid var(--b);padding:15px 10px;font-size:10px;color:#ad98a2;line-height:1.7}.main{min-width:0;flex:1}.bar{height:73px;border-bottom:1px solid var(--b);background:#fffcfb;display:flex;align-items:center;gap:15px;padding:0 24px;position:sticky;top:0;z-index:4}.bar .logo{font-size:17px}.bar .symbol{height:30px;width:30px;font-size:16px}.search{border:1px solid #eadfe1;border-radius:9px;padding:10px 14px;max-width:380px;flex:1;outline:none}.bar-end{margin-left:auto;display:flex;gap:10px;align-items:center}.org{border:1px solid #e6d5dd;border-radius:9px;padding:8px;max-width:140px;background:white;color:var(--p);font-weight:800}.avatar{border-radius:50%;height:32px;width:32px;display:grid;place-items:center;background:var(--p);color:white;font-weight:800}.work{padding:27px 24px 50px;max-width:1460px;margin:auto}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin:17px 0}.stat{padding:17px;display:flex;gap:12px;align-items:center}.stat span.ico{background:#f8e9e5;color:#b37c50;width:45px;height:45px;display:grid;place-items:center;border-radius:12px;font-size:21px}.stat strong{font-size:23px;display:block;margin-top:3px;color:var(--p)}.stat label{font-size:10px;font-weight:800;color:#8c7180}.grid{display:grid;grid-template-columns:1.15fr 1fr .85fr;gap:14px;margin-bottom:14px}.grid2{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:14px}.cal-month{display:flex;justify-content:space-between;align-items:center;font-weight:800;color:#785a69;margin-bottom:10px}.cal-month button{border:0;background:transparent;color:var(--p);font-size:22px}.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center}.cal div{padding:7px 0;border-radius:50%;font-weight:700}.cal .wd{font-size:10px;color:#b09ba5}.cal .today{background:var(--p);color:white}.cal .highlight{color:#ac6b26;background:#fff4e6}.event-photo{width:100%;height:136px;object-fit:cover;border-radius:10px;margin-bottom:10px}.details{margin:8px 0;font-size:11px;color:#856e79}.sched{border-left:2px solid #c9935f;padding:0 0 14px 13px;margin:13px 0;line-height:1.5;font-size:12px}.sched b{color:var(--p)}.task{display:flex;align-items:center;gap:7px;border-bottom:1px solid #f1e8e8;padding:10px 0;font-size:11px}.task input{accent-color:var(--p)}.track{height:9px;background:#f6e7eb;border-radius:20px;overflow:hidden;margin:18px 0}.track:before{content:"";display:block;background:var(--p);height:100%;width:72%;border-radius:20px}.sum{display:flex;justify-content:space-between;margin:11px 0;color:#8b6d7d}.supplier{padding:11px 0;border-bottom:1px solid #f4ebeb;display:flex;justify-content:space-between;gap:7px;align-items:center}.tablewrap{overflow:auto}.table{width:100%;border-collapse:collapse;min-width:600px;text-align:left}.table th{background:#fbf7f6;color:#a18d96;font-size:10px}.table th,.table td{padding:14px 12px;border-bottom:1px solid #f0e5e5}.table td:first-child{font-weight:800;color:#5c3549}.section{padding:20px}.section-title{font-size:17px;color:var(--p);margin-bottom:15px}.filter{border:1px solid #eee0e5;padding:9px 11px;border-radius:9px;max-width:220px}.menu{display:none}.veil{display:none}.overlay{position:fixed;inset:0;background:#1c0d15aa;display:grid;place-items:center;padding:12px;z-index:30}.dialog{max-width:500px;width:100%;max-height:95vh;overflow:auto;padding:25px;border-radius:18px;background:white}.dialog-head{display:flex;justify-content:space-between;margin-bottom:12px;align-items:center}.close{background:none;border:0;font-size:24px}.floatmsg{position:fixed;bottom:20px;right:16px;background:var(--p);color:white;padding:13px 16px;border-radius:10px;z-index:40}.hidden{display:none!important}
+@media(max-width:1200px){.grid{grid-template-columns:1fr 1fr}.grid .card:last-child{grid-column:span 2}.grid2{grid-template-columns:1fr 1fr}.grid2 .card:last-child{grid-column:span 2}.stat{padding:10px}.stat span.ico{width:35px;height:35px}.stat strong{font-size:19px}}
+@media(max-width:750px){.side{position:fixed;top:0;bottom:0;left:0;z-index:20;transform:translateX(-110%);transition:.2s;box-shadow:5px 0 25px #2a142022}.side.open{transform:none}.veil.open{display:block;position:fixed;inset:0;background:#1e0a1677;z-index:19}.menu{display:block;background:none;border:0;font-size:22px;color:var(--p)}.bar{padding:0 12px;height:63px}.bar>.search{display:none}.work{padding:18px 12px 60px}.top h1{font-size:25px}.top .btn{font-size:10px;padding:9px}.stats{grid-template-columns:1fr 1fr;gap:9px}.stat label{font-size:9px}.grid,.grid2{grid-template-columns:1fr;gap:11px}.grid .card:last-child,.grid2 .card:last-child{grid-column:auto}.search{display:none}.org{max-width:112px;font-size:11px}.bar .logo{font-size:16px}#login{grid-template-columns:1fr}.photo{min-height:180px;padding:24px}.photo h1{font-size:27px}.photo p{font-size:12px;margin-top:12px}.login-wrap{padding:24px 14px}.login-card{padding:24px}.login-card h2{font-size:30px}.pad{padding:16px}}
+</style><style>/* Facturation des événements — présentation mobile/tablette/ordinateur */
+.billing-dialog{max-width:860px}.bill-sub{color:#826c77;margin:0 0 12px;font-size:12px;line-height:1.5}.bill-tabs{display:flex;gap:7px;flex-wrap:wrap;border-bottom:1px solid #e8d9df;margin:14px 0 18px}.bill-tab{background:transparent;border:0;border-bottom:3px solid transparent;padding:11px 13px;font-weight:800;color:#8e7481;font-size:12px}.bill-tab.selected{color:#531b3c;border-color:#b78952}.bill-totals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:10px 0 23px}.bill-totals>div{border:1px solid #eee4e3;border-radius:11px;padding:13px;background:#fbf8f7;min-width:0}.bill-totals small{display:block;font-size:10px;color:#866f7b;margin-bottom:7px}.bill-totals b{display:block;color:#51213d;font-size:16px;word-break:break-word}.bill-totals>.due{background:#fff2df;border-color:#f3dec0}.bill-totals>.due b{color:#9b591e}.bill-section-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}.bill-section-title h3{font-size:16px;color:#50243e}.bill-lines{border:1px solid #eee3e4;border-radius:12px;overflow:hidden}.bill-line{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:14px;align-items:center;padding:14px;border-bottom:1px solid #f2e9e9}.bill-line:last-child{border:0}.bill-line-name{min-width:0}.bill-line-name strong{display:block;font-size:13px;overflow-wrap:anywhere}.bill-line-name small{display:block;font-size:11px;color:#977e8a;margin-top:6px}.bill-line>b{font-size:12px;white-space:nowrap;color:#4b2440}.bill-row-actions{display:flex;gap:9px}.bill-row-actions button{border:0;background:transparent;font-size:11px;color:#965a75;text-decoration:underline;font-weight:800}.bill-empty{padding:25px;text-align:center;border:1px dashed #e5cfd8;border-radius:12px;color:#977c8d}.bill-hint{font-size:10px;line-height:1.6;color:#96808e;margin-top:12px}.bill-warning{border-radius:10px;padding:11px;background:#fff1e4;color:#9c5a24;font-size:11px}.bill-two{display:grid;grid-template-columns:1fr 1fr;gap:12px}.bill-form-actions{display:flex;justify-content:flex-end;gap:12px;margin-top:21px}.bill-paper{padding:22px;border:1px solid #e9dfe1;border-radius:11px;background:white}.bill-paper hr{border:0;border-top:1px solid #f0e5e4;margin:22px 0}.bill-paper-lines{margin-top:18px;padding-top:12px;border-top:1px solid #ece1e5}.bill-paper-lines>div{display:flex;justify-content:space-between;align-items:flex-start;gap:15px;margin:9px 0;font-size:12px}.bill-paper-lines>div>span{max-width:70%;overflow-wrap:anywhere}.bill-paper-lines .bill-due{padding:14px 0;border-top:1px solid #e6d6db;color:#79334d;font-size:14px}
+@media(max-width:680px){.billing-dialog{padding:18px}.bill-tab{padding:9px 5px;font-size:10px}.bill-totals{gap:6px}.bill-totals>div{padding:10px 7px}.bill-totals b{font-size:12px}.bill-totals small{font-size:9px}.bill-line{grid-template-columns:minmax(0,1fr) auto;gap:8px;padding:12px}.bill-row-actions{grid-column:1/-1;justify-content:flex-end}.bill-two{grid-template-columns:1fr}.bill-paper{padding:13px}.bill-section-title h3{font-size:13px}.bill-section-title .btn{font-size:10px;padding:9px}}
+</style></head><body>
+<section id="login"><div class="photo"><div><div class="eyebrow" style="color:#f2d09a">GESTION ÉVÉNEMENTIELLE</div><h1 style="margin-top:10px">L’art d’organiser,<br>en toute sérénité.</h1><p>Mariages, anniversaires, baptêmes et réceptions.<br>Tout votre métier au même endroit.</p></div></div><div class="login-wrap"><div class="login-body"><div class="logo"><span class="symbol">♡</span>Eventa <em>Manager</em></div><div class="login-card"><h2>Connexion</h2><p>Votre espace de gestion professionnel</p><div class="notice"><b>Démonstration gratuite</b> — aucune connexion réelle, aucun paiement et uniquement des données fictives.</div><label class="field">Adresse e-mail<input readonly value="demo@eventa.example"></label><label class="field">Mot de passe<input type="password" readonly value="demo1234"></label><label class="field">Espace de démonstration<select id="loginorg"><option value="x">Xevent</option><option value="t">TraiteurX</option><option value="a">Super Admin</option></select></label><button class="btn" style="width:100%" onclick="enter()">Accéder à la démonstration →</button><p class="muted small" style="text-align:center;margin-top:16px">Aucune information n’est transmise au serveur</p></div></div></div></section>
+<section id="app" class="hidden"><div id="veil" class="veil" onclick="closemenu()"></div><aside class="side" id="side"><div class="logo"><span class="symbol">♡</span>Eventa <em>Manager</em></div><div class="group">MENU PRINCIPAL</div><div id="nav"></div><div class="side-foot">✧ Eventa Manager<br>Aperçu responsive · Données fictives</div></aside><div class="main"><header class="bar"><button class="menu" onclick="togglemenu()">☰</button><div class="logo"><span class="symbol">♡</span>Eventa <em>Manager</em></div><input class="search" placeholder="⌕ Rechercher un événement..." oninput="filterGlobal(this.value)"><div class="bar-end"><select id="org" class="org" onchange="orgChange(this.value)"><option value="x">Xevent</option><option value="t">TraiteurX</option><option value="a">Super Admin</option></select><div class="avatar">EM</div><button style="background:none;border:0;font-size:20px;color:#a68799" onclick="logout()" aria-label="Déconnexion">⎋</button></div></header><div class="work"><div class="notice"><b>APERÇU INTERACTIF</b> : données inventées, sans base MySQL. Les actions simulées restent dans cette session uniquement.</div><div id="page"></div></div></div></section>
+<div id="modal" class="overlay hidden" onclick="if(event.target===this)closemodal()"><div class="dialog" id="dialog"></div></div><div id="message" class="floatmsg hidden"></div>
+<script>
+const D={x:{name:"Xevent",events:[["Mariage de Yassine & Salma","Yassine El Amrani","14/11/2026","Mariage","Confirmé","180 000 MAD","250","Salle Royale"],["Anniversaire de Lina","Amal Benjelloun","22/11/2026","Anniversaire","En préparation","12 000 MAD","45","Villa Jardin"],["Baptême d’Adam","Karim Haddad","29/11/2026","Baptême","En attente","25 000 MAD","80","Dar Al Warda"]],stats:["24","8","12","125 000 MAD"],tasks:["Confirmer le traiteur","Envoyer le devis décoration","Relancer le paiement de l’acompte","Finaliser le plan de salle"],vendors:["Délices du Raid — Traiteur","Studio Lumière — Photographe","DJ M’Events","Fleur d’Or — Décoration"]},t:{name:"TraiteurX",events:[["Cocktail du mariage Benali","Famille Benali","16/11/2026","Mariage","Confirmé","38 000 MAD","180","Villa des Oliviers"],["Buffet anniversaire Sofia","Sofia El Idrissi","25/11/2026","Anniversaire","En préparation","9 500 MAD","65","Salle Jasmin"],["Réception familiale Zineb","Zineb Alaoui","28/11/2026","Réception","En attente","18 000 MAD","95","Maison d’hôtes"]],stats:["13","5","9","88 500 MAD"],tasks:["Valider le menu végétarien","Commander les ingrédients","Confirmer l’équipe de service","Prévoir le transport du matériel"],vendors:["Ferme Al Amal — Fournitures","Pâtisserie Nour — Desserts","Location Atlas — Mobilier"]}};
+let S={org:"x",page:"dashboard",month:10,year:2026,extra:[],checks:{},filter:""};
+const menu=[["dashboard","▦","Tableau de bord"],["events","▣","Événements"],["calendar","▤","Calendrier"],["clients","♙","Clients"],["vendors","♧","Prestataires"],["quotes","≡","Devis & Factures"],["payments","▤","Paiements"],["guests","♙","Invités"],["tasks","☑","Tâches"],["team","♧","Équipe"],["budget","◴","Budget"],["material","◇","Matériel"],["reports","▥","Rapports"],["settings","⚙","Paramètres"]],admin=[["dashboard","▦","Vue générale"],["organizations","♧","Organisations"],["users","♙","Utilisateurs"],["reports","▥","Rapports"],["settings","⚙","Paramètres"]];
+const $=s=>document.getElementById(s),safe=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])),evt=()=>D[S.org].events.concat(S.extra.filter(e=>e.org===S.org).map(e=>e.v)),tag=t=>'<span class="tag '+(t==="Confirmé"?"green":t==="En préparation"?"blue":t==="Anniversaire"?"pink":"")+'">'+safe(t)+'</span>';
+function enter(){S.org=$("loginorg").value;S.page="dashboard";$("login").classList.add("hidden");$("app").classList.remove("hidden");render()}
+function logout(){$("app").classList.add("hidden");$("login").classList.remove("hidden");closemenu()}
+function orgChange(o){S.org=o;S.page="dashboard";S.filter="";render()}
+function togglemenu(){$("side").classList.toggle("open");$("veil").classList.toggle("open")}
+function closemenu(){$("side").classList.remove("open");$("veil").classList.remove("open")}
+function go(p){S.page=p;S.filter="";render();closemenu();window.scrollTo(0,0)}
+function filterGlobal(v){S.filter=v;S.page="events";render()}
+function title(t,sub,add=false){return '<div class="top"><div><div class="eyebrow">EVENTA MANAGER / '+safe(S.org==="a"?"ADMINISTRATION":D[S.org].name.toUpperCase())+'</div><h1>'+safe(t)+'</h1><div class="muted" style="margin-top:7px">'+safe(sub)+'</div></div>'+(add?'<button class="btn sm" onclick="newEvent()">＋ Nouvel événement</button>':"")+'</div>'}
+function stat(t,n,ico){return '<div class="card stat"><span class="ico">'+ico+'</span><div><label>'+t+'</label><strong>'+safe(n)+'</strong></div></div>'}
+function cal(){const first=(new Date(S.year,S.month,1).getDay()+6)%7,n=new Date(S.year,S.month+1,0).getDate(),months=["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"];let s='<div class="cal-month"><button onclick="shift(-1)">‹</button>'+months[S.month]+' '+S.year+'<button onclick="shift(1)">›</button></div><div class="cal">';["L","M","M","J","V","S","D"].forEach(t=>s+='<div class="wd">'+t+'</div>');for(let i=0;i<first;i++)s+='<div></div>';for(let i=1;i<=n;i++){let hit=evt().some(e=>{let a=e[2].split("/");return Number(a[0])===i&&Number(a[1])===S.month+1&&Number(a[2])===S.year});s+='<div class="'+(i===11&&S.month===10&&S.year===2026?"today":hit?"highlight":"")+'">'+i+'</div>'}return s+'</div>'}
+function shift(v){S.month+=v;if(S.month<0){S.month=11;S.year--}if(S.month>11){S.month=0;S.year++}render()}
+function listing(head,rows,open=false){return '<div class="tablewrap"><table class="table"><thead><tr>'+head.map(h=>'<th>'+safe(h)+'</th>').join('')+(open?'<th>Action</th>':'')+'</tr></thead><tbody>'+rows.map((r,i)=>'<tr>'+r.map(c=>'<td>'+(/^(Confirmé|En attente|En préparation)$/.test(String(c))?tag(c):safe(c))+'</td>').join('')+(open?'<td><button class="link" onclick="eventDetail('+i+')">Ouvrir</button></td>':'')+'</tr>').join('')+'</tbody></table></div>'}
+function orgtable(){return listing(["Organisation","Activité","Événements","Statut"],[["Xevent","Organisation d’événements","24","Confirmé"],["TraiteurX","Traiteur / réceptions","13","Confirmé"]])}
+function dashboard(){if(S.org==="a")return title("Super Administration","Gérez les organisations et leurs accès.")+'<div class="stats">'+stat("Organisations","2","♧")+stat("Comptes","4","♙")+stat("Événements","37","▣")+stat("Espaces séparés","2","♢")+'</div><div class="card section"><div class="heading"><h3>Organisations</h3><button class="btn sm" onclick="toast(\'Création réelle disponible dans le backend complet\')">＋ Organisation</button></div>'+orgtable()+'</div>';
+let o=D[S.org],e=evt()[0];return title("Tableau de bord","Bienvenue ! Voici le suivi de votre activité.",true)+'<div class="stats">'+stat("ÉVÉNEMENTS",o.stats[0],"▣")+stat("À VENIR",o.stats[1],"▤")+stat("CLIENTS ACTIFS",o.stats[2],"♙")+stat("CHIFFRE D’AFFAIRES",o.stats[3],"◉")+'</div><div class="grid"><div class="card pad"><div class="heading"><h3>Planning des événements</h3><button class="link" onclick="go(\'calendar\')">Voir →</button></div>'+cal()+'</div><div class="card pad"><div class="heading"><h3>Prochain événement</h3>'+tag(e[4])+'</div><img class="event-photo" src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=700&q=85" alt="Décoration événementielle"><b style="font-size:15px">'+safe(e[0])+'</b><div class="details">▣ '+safe(e[2])+'</div><div class="details">⌖ '+safe(e[7])+'</div><div class="details">♙ '+safe(e[6])+' invités</div><button class="btn sm" style="width:100%;margin-top:8px" onclick="eventDetail(0)">Voir l’événement →</button></div><div class="card pad"><div class="heading"><h3>Agenda du jour</h3><span class="muted small">11 nov. 2026</span></div>'+["09:00|Réunion de coordination","11:00|Validation du devis client","15:00|Préparation du matériel","17:30|Appel prestataire"].map(x=>'<div class="sched"><b>'+x.split("|")[0]+'</b><br>'+x.split("|")[1]+'</div>').join('')+'</div></div><div class="grid2"><div class="card pad"><div class="heading"><h3>Tâches à suivre</h3><button class="link" onclick="go(\'tasks\')">Voir tout →</button></div>'+o.tasks.map((t,i)=>'<label class="task"><input type="checkbox" '+(S.checks[S.org+i]?'checked':'')+' onchange="checkTask('+i+',this.checked)">'+safe(t)+'</label>').join('')+'</div><div class="card pad"><div class="heading"><h3>Budget & paiements</h3><button class="link" onclick="go(\'budget\')">Détails →</button></div><div class="track"></div><div class="section-title">72 % <span class="muted small">du budget</span></div><div class="sum"><span>Budget total</span><b>'+safe(e[5])+'</b></div><div class="sum"><span>Consommé</span><b>72 %</b></div><div class="sum"><span>Prévisionnel restant</span><b>28 %</b></div></div><div class="card pad"><div class="heading"><h3>Prestataires</h3><button class="link" onclick="go(\'vendors\')">Gérer →</button></div>'+o.vendors.map((v,i)=>'<div class="supplier"><span>'+safe(v)+'</span>'+tag(i===o.vendors.length-1?"En attente":"Confirmé")+'</div>').join('')+'</div></div><div class="card section"><div class="heading"><h3>Événements récents</h3><button class="link" onclick="go(\'events\')">Voir tous →</button></div>'+listing(["Événement","Client","Date","Type","Statut","Budget"],evt().map(e=>e.slice(0,6)),true)+'</div>'}
+function checkTask(i,v){S.checks[S.org+i]=v}
+function tableData(){const o=D[S.org],ev=evt();switch(S.page){case "events":return ["Événements","Tous les événements de vos clients.",["Événement","Client","Date","Type","Statut","Budget"],ev.map(e=>e.slice(0,6)),true];case "clients":return ["Clients","Le suivi de vos clients.",["Client","Événement","Statut"],ev.map(e=>[e[1],e[0],e[4]])];case "vendors":return ["Prestataires","Vos partenaires et fournisseurs.",["Prestataire","Statut"],o.vendors.map(v=>[v,"Confirmé"])];case "quotes":return ["Devis & Factures","Documents commerciaux fictifs.",["Référence","Client","Budget","Statut"],ev.map((e,i)=>["DEV-2026-0"+(i+1),e[1],e[5],e[4]])];case "payments":return ["Paiements","Suivi des paiements fictifs.",["Référence","Client","Montant","Statut"],ev.map((e,i)=>["PAY-2026-0"+(i+1),e[1],e[5],e[4]])];case "guests":return ["Invités","Suivi des présences.",["Événement","Invités","Confirmations"],ev.map(e=>[e[0],e[6],Math.round(e[6]*.82)])];case "tasks":return ["Tâches","Gestion des préparatifs.",["Tâche","Statut"],o.tasks.map((v,i)=>[v,S.checks[S.org+i]?"Terminée":"À faire"])];case "team":return ["Équipe","Collaborateurs de l’organisation.",["Nom","Rôle"],[["Administrateur","Administration"],["Coordinateur","Événements"],["Assistant","Suivi client"]]];case "budget":return ["Budget","Prévisions financières.",["Événement","Budget","Consommé"],ev.map(e=>[e[0],e[5],"72 %"])];case "material":return ["Matériel","Équipements nécessaires.",["Équipement","Quantité","Statut"],[["Tables rondes",30,"Disponible"],["Chaises",250,"Disponible"],["Sonorisation","2 kits","Réservé"]]];case "users":return ["Utilisateurs","Comptes de démonstration.",["Utilisateur","Organisation","Rôle"],[["Admin Xevent","Xevent","Administrateur"],["Admin TraiteurX","TraiteurX","Administrateur"],["Super Admin","Plateforme","Super administrateur"]]];case "reports":return ["Rapports","Synthèse des activités.",["Indicateur","Valeur"],[["Organisations",2],["Événements",37],["Satisfaction","94 %"]]];default:return ["Paramètres","Réglages de votre espace.",["Paramètre","Valeur"],[["Devise","MAD"],["Langue","Français"],["Mode","Démonstration"]]]}}
+function other(){if(S.page==="calendar")return title("Calendrier","Retrouvez les événements planifiés.")+'<div class="card pad" style="max-width:600px">'+cal()+'</div><div style="margin-top:14px" class="card section">'+listing(["Événement","Client","Date","Type","Statut","Budget"],evt().map(e=>e.slice(0,6)),true)+'</div>';if(S.page==="organizations")return title("Organisations","Espaces indépendants pour vos clients.")+'<div class="card section"><div class="heading"><h3>Organisations</h3><button class="btn sm" onclick="toast(\'Action de démonstration uniquement\')">＋ Organisation</button></div>'+orgtable()+'</div>';let [name,sub,headers,rows,click]=tableData();rows=rows.filter(r=>r.join(" ").toLowerCase().includes(S.filter.toLowerCase()));return title(name,sub,S.page==="events")+'<div class="card section"><div class="heading"><div><h3>'+safe(name)+'</h3><span class="small muted">'+rows.length+' éléments</span></div><input class="filter" placeholder="⌕ Filtrer" value="'+safe(S.filter)+'" oninput="setFilter(this.value)"></div>'+listing(headers,rows,!!click)+'</div>'}
+function setFilter(v){S.filter=v;render()}
+function render(){$("org").value=S.org;$("nav").innerHTML=(S.org==="a"?admin:menu).map(n=>'<button class="nav '+(S.page===n[0]?"active":"")+'" onclick="go(\''+n[0]+'\')"><i>'+n[1]+'</i>'+n[2]+'</button>').join("");$("page").innerHTML=S.page==="dashboard"?dashboard():other()}
+function eventDetail(i){let e=evt()[i];if(!e)return;$("dialog").innerHTML='<div class="dialog-head"><h2>'+safe(e[0])+'</h2><button class="close" onclick="closemodal()">×</button></div><p style="margin-bottom:13px">'+tag(e[3])+' '+tag(e[4])+'</p><img class="event-photo" style="height:160px" src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=700&q=80" alt="Événement"><p class="details"><b>Client :</b> '+safe(e[1])+'</p><p class="details"><b>Date :</b> '+safe(e[2])+'</p><p class="details"><b>Lieu :</b> '+safe(e[7])+'</p><p class="details"><b>Invités :</b> '+safe(e[6])+'</p><p class="details"><b>Budget :</b> '+safe(e[5])+'</p><button class="btn" style="width:100%;margin-top:12px" onclick="closemodal()">Fermer</button>';$("modal").classList.remove("hidden")}
+function newEvent(){$("dialog").innerHTML='<div class="dialog-head"><h2>Nouvel événement</h2><button class="close" onclick="closemodal()">×</button></div><p class="notice">Enregistrement fictif dans cette session uniquement.</p><form onsubmit="saveEvent(event)"><label class="field">Événement<input id="n" required maxlength="90" placeholder="Mariage de Sarah et Ali"></label><label class="field">Client<input id="c" required maxlength="80"></label><label class="field">Date<input id="d" type="date" required value="2026-11-26"></label><label class="field">Type<select id="t"><option>Mariage</option><option>Anniversaire</option><option>Baptême</option><option>Réception</option></select></label><label class="field">Budget (MAD)<input id="b" type="number" min="0" value="20000" required></label><button class="btn" style="width:100%;margin-top:15px">Créer</button></form>';$("modal").classList.remove("hidden")}
+function saveEvent(e){e.preventDefault();let d=$("d").value.split("-");S.extra.push({org:S.org,v:[$("n").value,$("c").value,d[2]+"/"+d[1]+"/"+d[0],$("t").value,"En préparation",Number($("b").value).toLocaleString("fr-FR")+" MAD","0","À définir"]});closemodal();go("events");toast("Événement créé dans l’aperçu")}
+function closemodal(){$("modal").classList.add("hidden")}
+function toast(msg){$("message").textContent=msg;$("message").classList.remove("hidden");setTimeout(()=>$("message").classList.add("hidden"),3000)}
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script><script>/*
+ * Eventa Manager — module de facturation de la démonstration.
+ * Uniquement des données fictives stockées dans ce navigateur.
+ * Les calculs utilisent des centimes entiers pour éviter les erreurs flottantes.
+ * Aucune émission de facture légale ni authentification réelle ici.
+ */
+(function () {
+  "use strict";
+  const STORAGE_KEY = "eventa-demo-billing-v2";
+  let records = {};
+  try {
+    records = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}") || {};
+  } catch (_) {
+    records = {};
+  }
+  const asCents = (v) => Math.round(Number(v || 0) * 100);
+  const mad = (cents) => (cents / 100).toLocaleString("fr-FR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " MAD";
+  const eventKey = (e) => S.org + "|" + e[0] + "|" + e[2];
+  const persist = () => {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(records)); }
+    catch (_) { /* Private browsing: keep only in-memory state */ }
+  };
+  function record(index) {
+    const e = evt()[index];
+    if (!e) return null;
+    const key = eventKey(e);
+    if (!records[key]) {
+      const seeded = index === 0;
+      const services = !seeded ? [] : S.org === "t" ? [
+        { name: "Cocktail de bienvenue", qty: 180, unitCents: asCents(65) },
+        { name: "Menu principal", qty: 180, unitCents: asCents(105) },
+        { name: "Service en salle", qty: 4, unitCents: asCents(350) }
+      ] : [
+        { name: "Décoration florale", qty: 1, unitCents: asCents(12000) },
+        { name: "Location salle et mobilier", qty: 1, unitCents: asCents(25000) },
+        { name: "Service traiteur", qty: 250, unitCents: asCents(300) },
+        { name: "DJ et sonorisation", qty: 1, unitCents: asCents(6000) },
+        { name: "Photographie et vidéo", qty: 1, unitCents: asCents(9000) }
+      ];
+      records[key] = {
+        services,
+        payments: seeded ? [{ label: "Acompte à la réservation", date: "2026-11-03", method: "Virement", amountCents: asCents(S.org === "t" ? 8000 : 20000) }] : []
+      };
+      persist();
+    }
+    return records[key];
+  }
+  function totals(r) {
+    const total = r.services.reduce((sum, item) => sum + item.qty * item.unitCents, 0);
+    const paid = r.payments.reduce((sum, pay) => sum + pay.amountCents, 0);
+    return { total, paid, due: Math.max(total - paid, 0), excess: Math.max(paid - total, 0) };
+  }
+  function opener(title, contents) {
+    $("dialog").innerHTML = '<div class="dialog-head"><h2>' + safe(title) + '</h2><button class="close" onclick="closemodal()" aria-label="Fermer">×</button></div>' + contents;
+    $("modal").classList.remove("hidden");
+    $("dialog").classList.add("billing-dialog");
+  }
+  function show(index, tab = "services") {
+    const e = evt()[index], r = record(index);
+    if (!e || !r) return;
+    const t = totals(r);
+    const tabs = [
+      ["services", "Prestations client"],
+      ["payments", "Acomptes & paiements"],
+      ["invoice", "Facture"]
+    ].map(([id, label]) => '<button class="bill-tab ' + (tab === id ? "selected" : "") + '" onclick="EventaBilling.show(' + index + ',\'' + id + '\')">' + label + "</button>").join("");
+    let content = '<div class="bill-sub">Client : <strong>' + safe(e[1]) + '</strong> · ' + safe(e[2]) + " · " + safe(e[3]) + '</div><div class="bill-tabs">' + tabs + "</div>";
+    content += '<div class="bill-totals"><div><small>Total prestations</small><b>' + mad(t.total) + '</b></div><div><small>Acomptes reçus</small><b>' + mad(t.paid) + '</b></div><div class="due"><small>Reste à payer</small><b>' + mad(t.due) + "</b></div></div>";
+    if (tab === "services") {
+      content += '<div class="bill-section-title"><h3>Demandes & prestations du client</h3><button class="btn sm" onclick="EventaBilling.editService(' + index + ',-1)">＋ Prestation</button></div>';
+      content += r.services.length ? '<div class="bill-lines">' + r.services.map((line, i) =>
+        '<div class="bill-line"><div class="bill-line-name"><strong>' + safe(line.name) + '</strong><small>' + line.qty + ' × ' + mad(line.unitCents) + '</small></div><b>' + mad(line.qty * line.unitCents) + '</b><div class="bill-row-actions"><button onclick="EventaBilling.editService(' + index + "," + i + ')">Modifier</button><button onclick="EventaBilling.deleteService(' + index + "," + i + ')">Supprimer</button></div></div>'
+      ).join("") + "</div>" : '<p class="bill-empty">Aucune prestation renseignée. Ajoute les demandes du client et leur tarif.</p>';
+      content += '<p class="bill-hint">Le budget prévisionnel de l’événement est distinct du total des prestations vendues.</p>';
+    } else if (tab === "payments") {
+      content += '<div class="bill-section-title"><h3>Historique des règlements</h3><button class="btn sm" onclick="EventaBilling.editPayment(' + index + ')">＋ Ajouter un acompte</button></div>';
+      content += r.payments.length ? '<div class="bill-lines">' + r.payments.map((p, i) =>
+        '<div class="bill-line"><div class="bill-line-name"><strong>' + safe(p.label) + '</strong><small>' + safe(p.date) + ' · ' + safe(p.method) + '</small></div><b>' + mad(p.amountCents) + '</b><div class="bill-row-actions"><button onclick="EventaBilling.deletePayment(' + index + "," + i + ')">Supprimer</button></div></div>'
+      ).join("") + "</div>" : '<p class="bill-empty">Aucun règlement reçu pour le moment.</p>';
+      if (t.excess) content += '<p class="bill-warning">Trop-perçu : ' + mad(t.excess) + '. Vérifie les règlements.</p>';
+    } else {
+      content += '<div class="bill-section-title"><h3>Aperçu de la facture</h3><span class="tag">Document de démonstration</span></div>';
+      content += '<div class="bill-paper"><div style="display:flex;justify-content:space-between;gap:12px"><div><strong style="font-size:21px;color:#4d1937">Eventa Manager</strong><div class="bill-hint">' + safe(D[S.org].name) + '</div></div><div style="text-align:right"><strong>FACTURE — DÉMO</strong><div class="bill-hint">Réf. DEMO-' + (index + 1) + '-' + S.org.toUpperCase() + '</div></div></div><hr><div class="bill-hint">Client : <b>' + safe(e[1]) + '</b><br>Événement : ' + safe(e[0]) + '<br>Date : ' + safe(e[2]) + '</div>';
+      content += '<div class="bill-paper-lines">' + r.services.map(line => '<div><span>' + safe(line.name) + ' — ' + line.qty + ' × ' + mad(line.unitCents) + '</span><strong>' + mad(line.qty * line.unitCents) + '</strong></div>').join("") + '</div><div class="bill-paper-lines"><div><b>TOTAL</b><b>' + mad(t.total) + '</b></div><div><span>Versements reçus</span><b>− ' + mad(t.paid) + '</b></div><div class="bill-due"><b>RESTE À PAYER</b><b>' + mad(t.due) + '</b></div></div><p class="bill-hint">Brouillon de démonstration sans valeur fiscale. Identification de l’émetteur, fiscalité et numérotation réglementaire à configurer avant une émission réelle.</p></div>';
+      content += '<button class="btn" style="width:100%;margin-top:15px" onclick="EventaBilling.makePdf(' + index + ')">⇩ Générer la facture PDF</button>';
+      if (!r.services.length) content += '<p class="bill-warning">Ajoute au moins une prestation avant de générer le PDF.</p>';
+    }
+    opener(e[0], content);
+  }
+  function editService(index, lineIndex) {
+    const r = record(index), old = lineIndex >= 0 ? r.services[lineIndex] : null;
+    const content = '<p class="bill-sub">Chaque prestation demandée par le client a un tarif et une quantité.</p><form onsubmit="EventaBilling.saveService(event,' + index + "," + lineIndex + ')"><label class="field">Prestation<input id="bill-name" maxlength="120" required value="' + safe(old?.name || "") + '" placeholder="Ex. Décoration, buffet, DJ..."></label><div class="bill-two"><label class="field">Quantité<input id="bill-qty" type="number" min="1" max="100000" step="1" required value="' + (old?.qty || 1) + '"></label><label class="field">Prix unitaire (MAD)<input id="bill-price" type="number" min="0" max="99999999" step="0.01" required value="' + (old ? old.unitCents / 100 : 0) + '"></label></div><div class="bill-form-actions"><button class="btn ghost" type="button" onclick="EventaBilling.show(' + index + ',\'services\')">Annuler</button><button class="btn" type="submit">Enregistrer</button></div></form>';
+    opener(old ? "Modifier la prestation" : "Ajouter une prestation", content);
+  }
+  function saveService(event, index, lineIndex) {
+    event.preventDefault();
+    const name = $("bill-name").value.trim(), qty = Number($("bill-qty").value), price = Number($("bill-price").value);
+    if (!name || !Number.isSafeInteger(qty) || qty < 1 || qty > 100000 || !Number.isFinite(price) || price < 0 || price > 99999999) {
+      toast("Vérifie le nom, la quantité et le prix."); return;
+    }
+    const service = { name, qty, unitCents: asCents(price) };
+    const r = record(index);
+    if (lineIndex >= 0) r.services[lineIndex] = service; else r.services.push(service);
+    persist(); show(index, "services"); toast("Prestation enregistrée.");
+  }
+  function deleteService(index, lineIndex) {
+    if (!confirm("Supprimer cette prestation ?")) return;
+    record(index).services.splice(lineIndex, 1); persist(); show(index, "services");
+  }
+  function editPayment(index) {
+    const content = '<p class="bill-sub">Acompte initial ou règlement complémentaire reçu du client.</p><form onsubmit="EventaBilling.savePayment(event,' + index + ')"><label class="field">Libellé<input id="bill-pay-label" required maxlength="100" value="Acompte client"></label><div class="bill-two"><label class="field">Montant reçu (MAD)<input id="bill-pay-amount" type="number" min="0.01" max="99999999" step="0.01" required></label><label class="field">Date de réception<input id="bill-pay-date" type="date" required value="' + new Date().toISOString().slice(0, 10) + '"></label></div><label class="field">Moyen de paiement<select id="bill-pay-method"><option>Virement</option><option>Espèces</option><option>Carte</option><option>Chèque</option><option>Autre</option></select></label><div class="bill-form-actions"><button class="btn ghost" type="button" onclick="EventaBilling.show(' + index + ',\'payments\')">Annuler</button><button class="btn" type="submit">Enregistrer le paiement</button></div></form>';
+    opener("Ajouter un règlement", content);
+  }
+  function savePayment(event, index) {
+    event.preventDefault();
+    const cents = asCents($("bill-pay-amount").value);
+    if (!Number.isSafeInteger(cents) || cents <= 0) { toast("Montant incorrect."); return; }
+    record(index).payments.push({
+      label: $("bill-pay-label").value.trim() || "Paiement",
+      date: $("bill-pay-date").value,
+      method: $("bill-pay-method").value,
+      amountCents: cents
+    });
+    persist(); show(index, "payments"); toast("Paiement enregistré.");
+  }
+  function deletePayment(index, payIndex) {
+    if (!confirm("Supprimer ce règlement de la démonstration ?")) return;
+    record(index).payments.splice(payIndex, 1); persist(); show(index, "payments");
+  }
+  function makePdf(index) {
+    const e = evt()[index], r = record(index), t = totals(r);
+    if (!r.services.length) { toast("Ajoute une prestation pour créer une facture."); return; }
+    if (!window.jspdf || !window.jspdf.jsPDF) {
+      toast("Bibliothèque PDF indisponible. Vérifie ta connexion Internet puis réessaie."); return;
+    }
+    const doc = new window.jspdf.jsPDF({ unit: "mm", format: "a4" });
+    const pageWidth = 210;
+    const ref = "DEMO-" + S.org.toUpperCase() + "-" + (index + 1);
+    doc.setFillColor(77, 25, 55); doc.rect(0, 0, pageWidth, 31, "F");
+    doc.setTextColor(255, 255, 255); doc.setFontSize(22); doc.text("EVENTA MANAGER", 16, 18);
+    doc.setFontSize(10); doc.text("FACTURE - DEMONSTRATION", 194, 18, { align: "right" });
+    doc.setTextColor(54, 39, 48); doc.setFontSize(10);
+    doc.text("Organisateur : " + D[S.org].name, 16, 45);
+    doc.text("Client : " + e[1], 16, 52);
+    doc.text("Evenement : " + e[0], 16, 59);
+    doc.text("Date de l'evenement : " + e[2], 16, 66);
+    doc.text("Reference : " + ref, 194, 45, { align: "right" });
+    doc.text("Emise le : " + new Date().toLocaleDateString("fr-FR"), 194, 52, { align: "right" });
+    let y = 80;
+    const header = () => {
+      doc.setFillColor(248, 239, 242); doc.rect(14, y - 6, 182, 10, "F");
+      doc.setFont("helvetica", "bold"); doc.text("Prestation", 17, y); doc.text("Qte", 124, y, { align: "right" });
+      doc.text("Prix unitaire", 160, y, { align: "right" }); doc.text("Total", 193, y, { align: "right" });
+      doc.setFont("helvetica", "normal"); y += 10;
+    };
+    header();
+    for (const line of r.services) {
+      if (y > 258) { doc.addPage(); y = 25; header(); }
+      const name = doc.splitTextToSize(line.name, 82);
+      const h = Math.max(8, name.length * 5 + 3);
+      doc.text(name, 17, y);
+      doc.text(String(line.qty), 124, y, { align: "right" });
+      doc.text(mad(line.unitCents), 160, y, { align: "right" });
+      doc.text(mad(line.qty * line.unitCents), 193, y, { align: "right" });
+      doc.setDrawColor(238, 227, 228); doc.line(16, y + h - 4, 194, y + h - 4); y += h;
+    }
+    if (y > 244) { doc.addPage(); y = 25; }
+    y += 8;
+    doc.setFont("helvetica", "bold"); doc.text("TOTAL PRESTATIONS", 117, y); doc.text(mad(t.total), 193, y, { align: "right" });
+    y += 9; doc.setFont("helvetica", "normal"); doc.text("Acomptes et paiements", 117, y); doc.text("- " + mad(t.paid), 193, y, { align: "right" });
+    y += 11; doc.setFontSize(12); doc.setFont("helvetica", "bold"); doc.text("RESTE A PAYER", 117, y); doc.text(mad(t.due), 193, y, { align: "right" });
+    doc.setFontSize(9); doc.setFont("helvetica", "normal"); doc.setTextColor(140, 95, 109);
+    doc.text("DOCUMENT DE DEMONSTRATION - SANS VALEUR FISCALE", 105, 284, { align: "center" });
+    doc.save("Facture-demo-" + S.org + "-" + (index + 1) + ".pdf");
+  }
+  window.EventaBilling = { show, editService, saveService, deleteService, editPayment, savePayment, deletePayment, makePdf };
+  window.eventDetail = (index) => show(index, "services");
+})();
+</script></body></html>
